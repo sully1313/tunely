@@ -75,8 +75,8 @@ app.get('/api', function api_index (req, res){
   });
 });
 
-app.get(db.Album.find({}), function (err, albums){
-  res.json(albums);
+app.get('/api/albums', function album_index(req, res){
+  db.Album.find({}, function (err, albums){res.json(albums);})
 })
 
 /**********
