@@ -3,7 +3,9 @@
 //require express in our app
 var express = require('express');
 // generate a new express app and call it 'app'
+var mongoose = require('mongoose');
 var app = express();
+var db = require('./models');
 
 // serve static files from public folder
 app.use(express.static(__dirname + '/public'));
